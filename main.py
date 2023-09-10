@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker, scoped_session
 from dotenv import load_dotenv
-import pymysql
 
 import pandas as pd
 import json
