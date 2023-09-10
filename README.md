@@ -8,9 +8,13 @@ loaded to an S3 Bucket in AWS.
 ### Steps
 ---
 1. First step is to created a User in the IAM service that will have the necessary policies to load data to the S3 bucket.
+   
 2. Then, create the S3 bucket that will stored the data.
+ 
 3. After creating the Data Lake, I begin coding the necessary variables that will allow the connections to the database.
+   
 4. When finished the '.env' file, I started writing the extract and load process.
+   
 5. Finally, after doing all that I run the program and was able to store all the data on the S3 bucket.
 
 ### Code
