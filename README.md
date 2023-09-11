@@ -2,8 +2,7 @@
 
 ### Summary
 ---
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This project focus on building an EL pipeline that will extract data from an On Premise MYSQL database and then
-loaded to an S3 Bucket in AWS.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This project focuses on building an EL pipeline that will extract data from an On Premise MYSQL database and then load it to an S3 Bucket in AWS.
 
 ### Steps
 ---
