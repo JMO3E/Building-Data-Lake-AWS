@@ -82,9 +82,3 @@
                     print(f"Unuccesful S3 response. Status = {status}");                       
         except Exception as error:
             print("Data load error: " + str(error));
-            
-    if __name__ == "__main__":
-        try:
-            extract();
-        except Exception as error:
-            print("Error while extracting the data: " + str(error));
