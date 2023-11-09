@@ -5,7 +5,7 @@
 ## Description
 
 ### Objetive
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The project will move data from On Premise database to a Data Lake. The first step will be extracting the data from three different tables. Then create the connection to the S3 bucket to start loading the data. Finally, after a succesfuly storing the data, the goal of the project is achieve.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The project will move data from On Premise database to a Data Lake. The first step will be extracting the data from three different tables. Then create the connection to the S3 bucket to start loading the data. Finally, after successful storage of the data, the project objective is achieved.
 
 ### Dataset
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The dataset used in this project is from a data that MYSQL database have.
