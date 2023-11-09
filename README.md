@@ -3,7 +3,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An EL pipeline that focus on extracting data from an On Premise MYSQL database and then load it to an S3 Bucket in AWS.
 
 ## Description
----
+
 ### Objetive
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The project will move data from On Premise database to a Data Lake. The first step will be extracting the data from three different tables. Then create the connection to the S3 bucket to start loading the data. Finally, after a succesfuly storing the data, the goal of the project is achieve.
 
@@ -11,15 +11,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The dataset used in this project is from a data that MYSQL database have.
 
 ### Tools & Technologies
-*Cloud - [AWS Cloud](https://aws.amazon.com/)
-*Data Lake - [AWS S3](https://aws.amazon.com/s3/?nc2=h_ql_prod_st_s3)
-*Language - [Python](https://www.python.org/)
+* Cloud - [AWS Cloud](https://aws.amazon.com/)
+* Data Lake - [AWS S3](https://aws.amazon.com/s3/?nc2=h_ql_prod_st_s3)
+* Language - [Python](https://www.python.org/)
 
 ### Architecture
 ![PR Covid Cases](img/World_Data.png)
 
 ## Code
----
+
 ### Set Up AWS Keys
 
     config_content = open('config.json');
@@ -55,7 +55,7 @@
         except Exception as error:
             print("Data extract error: " + str(error));
 
-### Load Data to AWS S3
+### Load Data to AWS S3 Bucket
     def load(df, table):  
         try:
             print(f'Importing {len(df)} rows from table {table}');
