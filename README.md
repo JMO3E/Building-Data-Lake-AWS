@@ -16,7 +16,7 @@
 * Language - [Python](https://www.python.org/)
 
 ### Architecture
-![World Data Architecture](img/World_Data.png)
+![World Data Architecture](WorldDataEL.png)
 
 ## Code
 
