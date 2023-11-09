@@ -16,7 +16,7 @@
 * Language - [Python](https://www.python.org/)
 
 ### Architecture
-![PR Covid Cases](img/World_Data.png)
+![World Data Architecture](img/World_Data.png)
 
 ## Code
 
