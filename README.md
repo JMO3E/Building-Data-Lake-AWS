@@ -1,29 +1,33 @@
-# Building a Data Lake in AWS
+# World Data Pipeline
 
-### Summary
----
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This project focus on building an EL pipeline that will extract data from an On Premise MYSQL database and then
-loaded to an S3 Bucket in AWS.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An EL pipeline that focus on extracting data from an On Premise MYSQL database and then load it to an S3 Bucket in AWS.
 
-### Steps
+## Description
 ---
-1. First step is to created a User in the IAM service that will have the necessary policies to load data to the S3 bucket.
-2. Then, create the S3 bucket that will stored the data.
-3. After creating the Data Lake, I begin coding the necessary variables that will allow the connections to the database.
-4. When finished the '.env' file, I started writing the extract and load process.
-5. Finally, after doing all that I run the program and was able to store all the data on the S3 bucket.
+### Objetive
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The project will move data from On Premise database to a Data Lake. The first step will be extracting the data from three different tables. Then create the connection to the S3 bucket to start loading the data. Finally, after a succesfuly storing the data, the goal of the project is achieve.
 
-### Code
+### Dataset
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The dataset used in this project is from a data that MYSQL database have.
+
+### Tools & Technologies
+*Cloud - [AWS Cloud](https://aws.amazon.com/)
+*Data Lake - [AWS S3](https://aws.amazon.com/s3/?nc2=h_ql_prod_st_s3)
+*Language - [Python](https://www.python.org/)
+
+### Architecture
+![PR Covid Cases](img/World_Data.png)
+
+## Code
 ---
-    # Getting API Keys
+### Set Up AWS Keys
+
     config_content = open('config.json');
     config = json.load(config_content);
-
-    # Setting Access Keys
     access_key = config['access_key'];
     secret_access_key = config['secret_access_key'];
 
-    # Getting SQL DB details
+### Set Up SQL DB variables
     load_dotenv();
 
     user = os.environ.get("NAME");
@@ -32,7 +36,7 @@ loaded to an S3 Bucket in AWS.
     db = os.environ.get("MYSQL_DATABASE");
     port = os.environ.get("MYSQL_PORT");
 
-    # Extract data from MYSQL
+### Extract data from MYSQL
     def extract():
         try:
             engine = create_engine(f'mysql+pymysql://{user}:{password}@{server}:{port}/{db}')
@@ -51,13 +55,13 @@ loaded to an S3 Bucket in AWS.
         except Exception as error:
             print("Data extract error: " + str(error));
 
-    # Load Data to AWS S3
+### Load Data to AWS S3
     def load(df, table):  
         try:
             print(f'Importing {len(df)} rows from table {table}');
             
             # Save to S3
-            s3_bucket = 'my-weather-data-bucket-18634';
+            s3_bucket = 'world-data-bucket-18634';
             upload_file_key = 'public/' + str(table) + f"/{str(table)}";
             file_path = upload_file_key + ".csv";
             
@@ -75,13 +79,6 @@ loaded to an S3 Bucket in AWS.
                 if status == 200:
                     print(f"Succesful S3 response. Status = {status}");
                 else:
-                    print(f"Unuccesful S3 response. Status = {status}");
-                        
+                    print(f"Unuccesful S3 response. Status = {status}");                       
         except Exception as error:
             print("Data load error: " + str(error));
-            
-    if __name__ == "__main__":
-        try:
-            extract();
-        except Exception as error:
-            print("Error while extracting the data: " + str(error));

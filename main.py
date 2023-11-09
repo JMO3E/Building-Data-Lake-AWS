@@ -8,7 +8,6 @@ import io
 import boto3
 import os
 
-
 # Getting API Keys
 config_content = open('config.json');
 config = json.load(config_content);
@@ -51,7 +50,7 @@ def load(df, table):
         print(f'Importing {len(df)} rows from table {table}');
         
         # Save to S3
-        s3_bucket = 'my-weather-data-bucket-18634';
+        s3_bucket = 'world-data-bucket-18634';
         upload_file_key = 'public/' + str(table) + f"/{str(table)}";
         file_path = upload_file_key + ".csv";
         
