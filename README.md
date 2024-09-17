@@ -1,6 +1,6 @@
 # World Data Pipeline
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This project aims to build a robust data pipeline that extracts data from an on-premise MySQL database, transforms the data to CSV files, and loads it into an AWS S3 bucket.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World Data pipeline was build to extract data from an on-premise MySQL database, then store the data in csv files and then transfer those files to AWS Cloud S3 bucket.
 
 ## Tools & Technologies
 * Cloud - [AWS Cloud](https://aws.amazon.com/)
