@@ -1,6 +1,6 @@
 # World Data Pipeline
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World Data Pipeline is an EL pipeline that was build to transfer historical data from to an an On-Premise MySQL database to AWS Cloud S3 Bucket. The first step is to extract the data from the database, then convert it to csv files and finally sent those files to the S3 Bucket.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World Data Pipeline is an EL pipeline that was build to transfer historical data from an On-Premise MySQL database to AWS Cloud S3 Bucket. The first step is to extract the data from the database, then convert it to csv files and finally sent those files to the S3 Bucket.
 
 ## Tools & Technologies
 * Cloud - [AWS Cloud](https://aws.amazon.com/)
